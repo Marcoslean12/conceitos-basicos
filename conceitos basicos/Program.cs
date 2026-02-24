@@ -2,13 +2,26 @@
 using System.ComponentModel.Design;
 
 int idade;
-idade = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Digite a sua idade: ");
-if (idade >= 18)
+bool idadeValida = false;
+while (!idadeValida)
 {
-    Console.WriteLine("Você é o maior de idade!");
+    Console.WriteLine("Digite a sua idade: ");
+    try
+    {
+        idade = Convert.ToInt32(Console.ReadLine());
+        idadeValida = true;
+        if (idade >= 18)
+        {
+            Console.WriteLine("Você é o maior de idade!");
+        }
+        else
+        {
+            Console.WriteLine("Você é menor de idade!");
+        }
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("O valor informado deve ser em algarismos algébricos. NÚMERICOS!");
+    }
 }
-else
-{
-    Console.WriteLine("Você é menor de idade!");
-}
+
