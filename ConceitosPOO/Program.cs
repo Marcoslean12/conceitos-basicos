@@ -8,3 +8,6 @@ cliente.Nome = "Marcos";
 Console.WriteLine($"Nome do cliente: {cliente.Nome}");
 cliente.Cpf = "01";
 Console.WriteLine($"Cpf do cliente: {cliente.Cpf}");
+
+Agencia agencia;
+agencia = new Agencia();
