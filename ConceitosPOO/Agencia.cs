@@ -8,23 +8,38 @@ namespace ConceitosPOO
 {
     public class Agencia
     {
-        private string _numero;
+        private int _numero;
         private string _nome;
         private string _telefone;
-        public string Numero
+        public string Nome
         {
-            get
-            {
-                return _numero;
-            }
+            get => _nome;
             set
             {
-                if (value.Length != 0)
-                    _numero = value;
-                else
-                    throw new Exception("O número não pode estar vazio!");
+                _nome = value;
             }
         }
+        public string Telefone
+        {
+            get => _telefone;
+            set
+            {
+                _telefone = value;
+            }
+        }
+        public int Numero
+        {
+            get => _numero;
+            private set
+            {
+                _numero = value;
+            }
+        }
+        public Agencia(int numero)
+        {
+            _numero = numero;
+        }
+        
     } 
 
 }

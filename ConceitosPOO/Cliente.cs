@@ -13,16 +13,10 @@ namespace ConceitosPOO
         private string _cpf;
         public string Nome
         {
-            get
-            {
-                return _nome;
-            }
+            get => _nome;
             set
             {
-                if (value.Length != 0)
-                    _nome = value;
-                else
-                    throw new Exception("O nome não pode estar vazio");
+                _nome = value;
             }
         }
         public string Cpf
@@ -34,12 +28,14 @@ namespace ConceitosPOO
             }*/
             set
             {
-                if (value.Length != 0)
-                    _cpf = value;
-                else
-                    throw new Exception("O Cpf não pode estar vazio");
+                _cpf = value;
             }
-        } 
+        }
+        public Cliente(string nome, string cpf)
+        {
+            _nome = nome;
+            _cpf = cpf;
+        }
 
     }
 }
