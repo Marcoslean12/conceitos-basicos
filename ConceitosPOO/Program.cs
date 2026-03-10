@@ -3,7 +3,11 @@ using ConceitosPOO;
 
 Console.WriteLine("Hello, World!");
 Cliente cliente;
-cliente = new Cliente("marcos", "123");
+Console.WriteLine("Informe o nome do cliente");
+string nome = Console.ReadLine();
+Console.WriteLine("Informe o CPF do cliente");
+string cpf = Console.ReadLine();
+cliente = new Cliente(nome, cpf);
 cliente.Nome = "Marcos";
 Console.WriteLine($"Nome do cliente: {cliente.Nome}");
 cliente.Cpf = "01";
