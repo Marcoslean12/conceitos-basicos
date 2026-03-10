@@ -33,7 +33,7 @@ namespace ConceitosPOO
         }
         public Cliente(string nome, string cpf)
         {
-            _nome = nome;
+            _nome = nome; 
             _cpf = cpf;
         }
 
