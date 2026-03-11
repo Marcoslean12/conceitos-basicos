@@ -32,11 +32,13 @@ namespace ConceitosPOO
         public void Deposito(decimal valor)
         {
             _saldo += valor;
+            //_saldo = _saldo + valor;
         }
 
         public void Saque(decimal valor)
         {
             _saldo -= valor;
+            //_saldo = _saldo - valor;
         }
     }
 }
